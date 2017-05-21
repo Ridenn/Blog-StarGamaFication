@@ -47,6 +47,12 @@ gem 'ckeditor', '~> 4.1'
 # Flexible authentication solution for Rails with Warden.
 gem 'devise'
 
+# Classier solution for file uploads for Rails, Sinatra and other Ruby web frameworks
+gem 'carrierwave'
+
+# mini replacement for RMagick
+gem 'mini_magick'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
