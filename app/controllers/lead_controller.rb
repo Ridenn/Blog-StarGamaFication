@@ -1,24 +1,22 @@
-class PostsController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
-  before_action :authenticate_admin!, except: [:index, :show]
+class LeadsController < ApplicationController
+  before_action :find_lead, only: [:edit, :update, :show, :delete]
 
   # Index action to render all posts
   def index
-    @posts = Post.all
-    @lead = Lead.new
+    @leads = Lead.all
   end
 
   # New action for creating post
   def new
-    @post = Post.new
+    @lead = Lead.new
   end
 
   # Create action saves the post into database
   def create
-    @post = Post.new
-    if @post.save(post_params)
+    @lead = Lead.new
+    if @lead.save(lead_params)
       flash[:notice] = "Successfully created post!"
-      redirect_to post_path(@post)
+      redirect_to post_path(@lead)
     else
       flash[:alert] = "Error creating new post!"
       render :new
@@ -31,9 +29,9 @@ class PostsController < ApplicationController
 
   # Update action updates the post with the new information
   def update
-    if @post.update_attributes(post_params)
+    if @lead.update_attributes(lead_params)
       flash[:notice] = "Successfully updated post!"
-      redirect_to post_path(@posts)
+      redirect_to post_path(@leads)
     else
       flash[:alert] = "Error updating post!"
       render :edit
@@ -46,7 +44,7 @@ class PostsController < ApplicationController
 
   # The destroy action removes the post permanently from the database
   def destroy
-    if @post.destroy
+    if @lead.destroy
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path
     else
@@ -56,11 +54,11 @@ class PostsController < ApplicationController
 
   private
 
-  def post_params
-    params.require(:post).permit(:title, :body)
+  def lead_params
+    params.require(:lead).permit(:name, :surname, :email)
   end
 
-  def find_post
-    @post = Post.find(params[:id])
+  def find_lead
+    @lead = Lead.find(params[:id])
   end
 end

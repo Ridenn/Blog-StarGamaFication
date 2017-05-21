@@ -1,5 +1,50 @@
-<div id="hero" class="row">
+<div class="container-fluid">
+  <section id="hero" class="row">
+    <div class="infos-hero col-md-6">
+      <h1>Titulo h1 onde as coisas <br/><spam class="destak-text">principais acontecem</spam></h1>
+    </div>
+    <div class="form-hero col-md-6">
+      <%= render "posts/formhero" %>
+    </div>
+  </section>
 </div>
+<div class="container-fluid">
+  <section id="basic-infos" class="row">
+    <div id="box-basic-infos" class="col-sm-6">
+      <div class="row">
+        <h1>Titulo h1 onde as coisas <br/><spam class="destak-text">principais acontecem</spam></h1>
+        <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
+      </div>
+      <div class="row">
+        <div id="minibox1-basic-infos" class="col-sm-6">
+          <%= image_tag("placeholder-circle.png") %>
+          <h3>Titulo h3 onde as coisas principais acontecem</h3>
+          <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
+        </div>
+        <div id="minibox2-basic-infos" class="col-sm-6">
+          <%= image_tag("placeholder-circle.png") %>
+          <h3>Titulo h3 onde as coisas principais acontecem</h3>
+          <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
+        </div>
+      </div>
+    </div>
+    <div id="box-img-basic-info" class="col-sm-6">
+      <%= image_tag("placeholder.png") %>
+    </div>
+  </section>
+</div>
+<div class="container-fluid">
+  <section id="carrossel" class="row">
+    <ul class="slider">
+      <li><div class="slider-content"><%= image_tag("placeholder-circle.png") %><p>No mundo atual, a complexidade dos estudos efetuados estimula a padronização dos conhecimentos estratégicos para atingir a excelência.</p></div></li>
+      <li><div class="slider-content"><%= image_tag("placeholder-circle.png") %><p>Não obstante, o fenômeno da Internet estimula a padronização das diretrizes de desenvolvimento para o futuro.</p></div></li>
+      <li><div class="slider-content"><%= image_tag("placeholder-circle.png") %><p>O cuidado em identificar pontos críticos no fenômeno da Internet possibilita uma melhor visão global dos índices pretendidos.</p></div></li>
+    </ul>
+  </section>
+</div>
+
+
+
 <div class="container">
   <div class="col-sm-10 col-sm-offset-1 col-xs-12">
     <% @posts.each do |post| %>
