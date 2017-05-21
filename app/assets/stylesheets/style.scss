@@ -1,0 +1,21 @@
+.notice {
+  display: none;
+}
+
+.alert {
+  display: none;
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+#hero {
+  top: 0;
+  background-image: image-url("placeholder-hero.png");
+  height:500px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:cover;
+  background-attachment: fixed;
+}
