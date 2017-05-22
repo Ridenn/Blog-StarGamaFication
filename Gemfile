@@ -64,6 +64,12 @@ end
 # The bxslider-rails is a gem with bxSlider (jQuery HTML Content Slider), ready to play with Rails.
 gem 'bxslider-rails'
 
+# Geocoder to get lead infos
+gem 'geocoder'
+
+# Gem pry for debug
+gem 'pry'
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
