@@ -1,71 +1,25 @@
-<div class="container-fluid">
-  <section id="hero" class="row">
-    <div class="infos-hero col-md-6">
-      <h1>Titulo h1 onde as coisas <br/><spam class="destak-text">principais acontecem</spam></h1>
-    </div>
-    <div class="form-hero col-md-6">
-      <%= render "posts/formhero" %>
-    </div>
-  </section>
-</div>
-<div class="container-fluid">
-  <section id="basic-infos" class="row">
-    <div id="box-basic-infos" class="col-sm-6">
-      <div class="row">
-        <h1>Titulo h1 onde as coisas <br/><spam class="destak-text">principais acontecem</spam></h1>
-        <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
-      </div>
-      <div class="row">
-        <div id="minibox1-basic-infos" class="col-sm-6">
-          <%= image_tag("placeholder-circle.png") %>
-          <h3>Titulo h3 onde as coisas principais acontecem</h3>
-          <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
+<% if @posts.count > 0 %>
+  <% @posts.each do |post| %>
+    <section class="container-fluid">
+      <article class="col-md-10">
+        <div class="col-md-10">
+          <h1 class="text-center"> <%= post.title %><br/></h1>
         </div>
-        <div id="minibox2-basic-infos" class="col-sm-6">
-          <%= image_tag("placeholder-circle.png") %>
-          <h3>Titulo h3 onde as coisas principais acontecem</h3>
-          <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
+        <div class="col-xs-12">
+          <%= raw post.body %>
         </div>
-      </div>
-    </div>
-    <div id="box-img-basic-info" class="col-sm-6">
-      <%= image_tag("placeholder.png") %>
-    </div>
-  </section>
-</div>
-<div class="container-fluid">
-  <section id="carrossel" class="row">
-    <ul class="slider">
-      <li><div class="slider-content"><h2></h2><p>No mundo atual, a complexidade dos estudos efetuados estimula a padronização dos conhecimentos estratégicos para atingir a excelência.</p></div></li>
-      <li><div class="slider-content"><h2></h2><p>Não obstante, o fenômeno da Internet estimula a padronização das diretrizes de desenvolvimento para o futuro.</p></div></li>
-      <li><div class="slider-content"><h2></h2><p>O cuidado em identificar pontos críticos no fenômeno da Internet possibilita uma melhor visão global dos índices pretendidos.</p></div></li>
-    </ul>
-  </section>
-</div>
-
-
-
-<div class="container">
-  <div class="col-sm-10 col-sm-offset-1 col-xs-12">
-    <% @posts.each do |post| %>
-    <div class="col-xs-12 text-center">
-      <div class="text-center">
-        <h2><%= post.title %></h2>
-        <h6><%= post.created_at.strftime('%b %d, %Y') %></h6>
-      </div>
-      <div>
-        <%= raw(post.body).truncate(358) %>
-      </div>
-      <div class="text-center">
-        <%= link_to "READ MORE", post_path(post) %>
-      </div>
+      </article>
+    </section>
+  <% end %>
+<% else %>
+  <section id="without-posts" class="container-fluid">
+    <article class="col-md-12">
+      <h1>Ainda não temos nenhuma postagem.</h1><br/>
       <% if admin_signed_in? %>
-        <%= link_to "Show", post_path(post), class: "btn btn-primary" %>
-        <%= link_to "Edit", edit_post_path(post), class: "btn btn-default" %>
-        <%= link_to "Delete", post_path(post), class: "btn btn-danger", data: {:confirm => "Are you sure?"}, method: :delete %>
+        <%= link_to "Faça uma postagem!", new_post_path %>
+      <% else %>
+        <h2>Volte mais tarde que teremos mais conteudo para você!</h2>
       <% end %>
-      <hr />
-    </div>
-    <% end %>
-  </div>
-</div>
+    </article>
+  </section>
+<% end %>

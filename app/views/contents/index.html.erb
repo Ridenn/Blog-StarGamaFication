@@ -1,0 +1,39 @@
+<% if @contents.count > 0 %>
+  <% @contents.each do |content| %>
+    <section class="container-fluid">
+      <article class="col-md-12">
+        <div class="col-md-3">
+          <h2 class="text-center">
+            <%= content.site_area %><br/>
+          </h2>
+        </div>
+        <div class="col-md-3">
+          <h2 class="text-center">
+            <%= content.featured_image %><br/>
+          </h2>
+        </div>
+        <div class="col-md-3">
+          <h2 class="text-center">
+            <%= content.lead %><br/>
+          </h2>
+        </div>
+        <div class="col-md-3">
+          <h2 class="text-center">
+            <%= content.content %><br/>
+          </h2>
+        </div>
+      </article>
+    </section>
+  <% end %>
+<% else %>
+  <section id="without-posts" class="container-fluid">
+    <article class="col-md-12">
+      <h1>Ainda não temos nenhum conteudo.</h1><br/>
+      <% if admin_signed_in? %>
+        <%= link_to "Crie um conteudo!", new_content_path, class: "btn btn-default" %>
+      <% else %>
+        <% redirect_to root_path %>
+      <% end %>
+    </article>
+  </section>
+<% end %>

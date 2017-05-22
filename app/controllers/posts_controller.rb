@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   # Index action to render all posts
   def index
     @posts = Post.all
-    @lead = Lead.new
   end
 
   # New action for creating post
@@ -15,8 +14,8 @@ class PostsController < ApplicationController
 
   # Create action saves the post into database
   def create
-    @post = Post.new
-    if @post.save(post_params)
+    @post = Post.new(post_params)
+    if @post.save
       flash[:notice] = "Successfully created post!"
       redirect_to post_path(@post)
     else
@@ -27,6 +26,7 @@ class PostsController < ApplicationController
 
   # Edit action retrives the post and renders the edit page
   def edit
+    find_post
   end
 
   # Update action updates the post with the new information
@@ -42,10 +42,12 @@ class PostsController < ApplicationController
 
   # The show action renders the individual post after retrieving the the id
   def show
+    find_post
   end
 
   # The destroy action removes the post permanently from the database
   def destroy
+    find_post
     if @post.destroy
       flash[:notice] = "Successfully deleted post!"
       redirect_to posts_path

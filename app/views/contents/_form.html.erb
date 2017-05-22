@@ -1,0 +1,34 @@
+<%= simple_form_for @content do |f| %>
+  <% if @content.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= "#{pluralize(@content.errors.count, "error")} prohibited this content from being saved:" %>
+      </h2>
+      <ul>
+        <% @content.errors.full_messages.each do |msg| %>
+          <li>
+            <%= msg %>
+          </li>
+          <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.select(:site_area, Content.options_for_select) %>
+  </div>
+
+  <div class="form-group">
+    <%= f.input :featured_image, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.input :lead, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.input :content, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.button :submit %>
+  </div>
+<% end %>

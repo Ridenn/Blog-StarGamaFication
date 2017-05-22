@@ -43,10 +43,12 @@ ActiveRecord::Schema.define(version: 20170521221315) do
   end
 
   create_table "contents", force: :cascade do |t|
-    t.string   "field"
+    t.string   "featured_image"
+    t.string   "lead"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "site_area",      default: 0
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "leads", force: :cascade do |t|

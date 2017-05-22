@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  get 'obrigado', to: "thanks#index"
+  root to: "home#index"
 
-  devise_for :admins
-  mount Ckeditor::Engine => '/ckeditor'
-
-  root to: "posts#index"
+  get 'home', to: "home#index"
+  get 'obrigado', to: "home#thanks", :as => 'thanks'
+  get 'contato', to: "home#contact", :as => 'contact'
 
   resources :posts
   resources :leads
+  resources :contents
+
+  devise_for :admins
+  mount Ckeditor::Engine => '/ckeditor'
 end

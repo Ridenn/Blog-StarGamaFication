@@ -1,4 +1,4 @@
-  <%= simple_form_for @lead, html: ({class: 'form-lead'}) do |f| %>
+<%= simple_form_for @lead, remote: true, html: ({class: 'form-lead'}) do |f| %>
   <% if @lead.errors.any? %>
     <div id="error_explanation">
       <h2>
@@ -14,17 +14,16 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-        <%= f.input :name, label: 'Nome:' %>
-  </div>
-  <div class="form-group">
+  <div class="form-group_name">
+    <%= f.input :name, label: 'Nome:' %>
     <%= f.input :surname, label: 'Sobrenome:' %>
   </div>
-  <div class="form-group">
+  <br />
+  <div class="form-group_email">
     <%= f.input :email, label: 'Email:' %>
   </div>
-    
- <div class="form-group_btn">
+  <br />
+  <div class="form-group_btn">
     <%= f.button :submit, 'Cadastrar' %>
   </div>
 <% end %>

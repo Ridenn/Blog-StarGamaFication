@@ -1,11 +1,6 @@
 class LeadsController < ApplicationController
   before_action :find_lead, only: [:edit, :update, :show, :delete]
 
-  # Index action to render all posts
-  def index
-    @leads = Lead.all
-  end
-
   # New action for creating post
   def new
     @lead = Lead.new
@@ -21,11 +16,7 @@ class LeadsController < ApplicationController
       redirect_to root_path
     end
   end
-
-  # The show action renders the individual post after retrieving the the id
-  def show
-  end
-
+  
   private
 
   def lead_params

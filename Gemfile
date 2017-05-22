@@ -56,19 +56,25 @@ gem 'carrierwave'
 # mini replacement for RMagick
 gem 'mini_magick'
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
-
-# The bxslider-rails is a gem with bxSlider (jQuery HTML Content Slider), ready to play with Rails.
-gem 'bxslider-rails'
+# Integrates Slick carousel, a jQuery plugin, into your Rails app.
+gem "jquery-slick-rails"
 
 # Geocoder to get lead infos
 gem 'geocoder'
 
 # Gem pry for debug
 gem 'pry'
+
+# the font-awesome font bundled as an asset for the rails asset pipeline
+gem 'font-awesome-rails'
+
+# Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
+gem 'enum_help'
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platform: :mri
+end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.

@@ -1,5 +1,5 @@
 <link href="//fonts.googleapis.com/css?family=Raleway:400,100,900" rel="stylesheet" type="text/css">
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Home</a>
+      <%= link_to 'Home', root_path, class: "navbar-brand" %>
     </div>
     <div class="navbar-center">
       <a>
@@ -21,12 +21,13 @@
         <% if admin_signed_in? %>
         <!--This block is only visible to signed in admins -->
           <li><%= link_to 'Novo post', new_post_path %></li>
-          <li><%= link_to 'Perfil', edit_admin_registration_path  %></li>
-          <li><%= link_to 'Sair', destroy_admin_session_path, :method => :delete %></li>
+          <!-- <li><%= link_to 'Perfil', edit_admin_registration_path  %></li> -->
+          <li><%= link_to 'Edit Home', contents_path %></li>
+          <li><%= link_to 'Sair', destroy_admin_session_path, method: :delete %></li>
         <!-- The block ends here -->
         <% else %>
-          <li><%= link_to 'Conteúdo', posts_path %></li>
-          <li><%= link_to 'Contato', posts_path %></li>
+          <li><%= link_to 'Posts', posts_path %></li>
+          <li><%= link_to 'Contato', contact_path %></li>
         <% end %>
       </ul>
     </div>

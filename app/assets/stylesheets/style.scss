@@ -1,3 +1,6 @@
+body {
+  padding-top: 70px;
+}
 .notice {
   display: none;
 }
@@ -51,7 +54,6 @@ input {
   background-color: #1a1a23 !important;
   border: 0px !important;
   border-radius: 0px !important;
-  position: relative;
 }
 
 .navbar-brand {
@@ -94,131 +96,4 @@ input {
 
 .destak-text {
   font-weight: 800;
-}
-
-#hero {
-  top: 0;
-  background-color: #5038fc;
-  height:500px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
-  position: relative;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-}
-
-.infos-hero, .form-hero {
-  top: 40%;
-  margin-top: -40px;
-}
-
-.infos-hero h1 {
-  text-align: center;
-}
-
-.form-group_name {
-  white-space : nowrap;
-}
-
-.form-group_name .lead_name {
-  display: inline-block;
-  width: 50%;
-  padding-right: 10px;
-}
-
-.form-group_name .lead_surname {
-  display: inline-block;
-  width: 50%;
-  padding-right: 10px;
-}
-
-.form-group_email {
-  display: inline-block;
-  width: 100%;
-  padding-right: 5px;
-}
-
-.form-group_btn {
-  text-align: center;
-}
-
-.form-group_btn input {
-  background-color: #1a1a23;
-  color: white;
-  border: 0px;
-  font-size: 24px;
-}
-
-#basic-infos {
-  top: 0;
-  background-color: #31313b;
-  height: 500px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size:cover;
-  background-attachment: fixed;
-  position: relative;
-  padding-left: 0px !important;
-  padding-right: 0px !important;
-}
-
-#basic-infos {
-  height: auto;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-#box-basic-infos {
-  padding-left: 70px;
-  padding-right: 30px;
-}
-
-#box-basic-infos p {
-  margin-top: 40px;
-}
-
-
-#box-img-basic-info {
-  padding-left: 30px;
-  padding-right: 50px;
-}
-
-#basic-infos img {
-  height: auto;
-  width: 100%;
-}
-
-#minibox1-basic-infos {
-  display: inline-block;
-  width: 50%;
-  margin-top: 50px;
-}
-
-#minibox1-basic-infos p {
-  margin-top: 20px;
-}
-
-#minibox1-basic-infos img {
-  float: left;
-  width: 30%;
-  margin-right: 20px;
-  margin-top: 20px;
-}
-
-#minibox2-basic-infos {
-  display: inline-block;
-  width: 50%;
-  margin-top: 50px;
-}
-
-#minibox2-basic-infos p {
-  margin-top: 20px;
-}
-
-#minibox2-basic-infos img {
-  float: left;
-  width: 30%;
-  margin-right: 20px;
-  margin-top: 20px;
 }
