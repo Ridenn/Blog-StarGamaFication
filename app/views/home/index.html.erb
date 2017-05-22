@@ -16,31 +16,47 @@
         <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
       </article>
       <div class="row">
-        <article id="minibox1-basic-infos" class="col-sm-6">
-          <%= image_tag("placeholder-circle.png") %>
+        <article id="minibox1-basic-infos" class="col-xs-6">
+          <%= image_tag("user.png") %>
           <h3>Titulo h3 onde as coisas principais acontecem</h3>
           <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
         </article>
-        <article id="minibox2-basic-infos" class="col-sm-6">
-          <%= image_tag("placeholder-circle.png") %>
+        <article id="minibox2-basic-infos" class="col-xs-6">
+          <%= image_tag("user.png") %>
           <h3>Titulo h3 onde as coisas principais acontecem</h3>
           <p>Gostaria de enfatizar que o aumento do diálogo entre os diferentes setores produtivos nos obriga à análise dos métodos utilizados na avaliação de resultados.</p>
         </article>
       </div>
     </div>
     <div id="box-img-basic-info" class="col-sm-6">
-      <%= image_tag("placeholder.png") %>
+      <%= image_tag("banner.png") %>
     </div>
   </div>
 </section>
-<div id="slider" class="container-fluid">
-  <section id="carrossel" class="row">
-    <article><h2>TesteBlaBlaBla</h2><p>No mundo atual, a complexidade dos estudos efetuados estimula a padronização dos conhecimentos estratégicos para atingir a excelência.</p></article>
-    <article><h2>TesteBlaBla</h2><p>Não obstante, o fenômeno da Internet estimula a padronização das diretrizes de desenvolvimento para o futuro.</p></article>
-    <article><h2>BlaBlaTeste</h2><p>O cuidado em identificar pontos críticos no fenômeno da Internet possibilita uma melhor visão global dos índices pretendidos.</p></article>
-  </section>
+<section id="slider" class="container-fluid">
+  <div id="carrossel" class="row">
+    <article><%= image_tag("user.png", class: 'img-rounded') %><h2>TesteBlaBlaBla</h2><p>No mundo atual, a complexidade dos estudos efetuados estimula a padronização dos conhecimentos estratégicos para atingir a excelência.</p></article>
+    <article><%= image_tag("user.png", class: 'img-rounded') %><h2>TesteBlaBla</h2><p>Não obstante, o fenômeno da Internet estimula a padronização das diretrizes de desenvolvimento para o futuro.</p></article>
+    <article><%= image_tag("user.png", class: 'img-rounded') %><h2>BlaBlaTeste</h2><p>O cuidado em identificar pontos críticos no fenômeno da Internet possibilita uma melhor visão global dos índices pretendidos.</p></article>
+  </div>
   <div class="slider-controls">
     <%= image_tag("left-arrow.png", class: "left-arrow") %>
     <%= image_tag("right-arrow.png", class: "right-arrow") %>
   </div>
-</div>
+</section>
+<section id="highlight-posts" class="container-fluid">
+  <div class="row">
+    <div id="highlight1" class="col-md-6 col-xs-12">
+      <h1>blablabla<br/><spam class="destak-text">UIKASACHEPORRÃ</spam></h1>
+      <%= link_to("Ver mais...", posts_path, class: 'btn btn-default') %>
+    </div>
+    <div id="highlight2" class="col-md-6 col-xs-12">
+      <h1>blablabla<br/><spam class="destak-text">UIKASACHEPORRÃ</spam></h1>
+      <%= link_to("Ver mais...", posts_path, class: 'btn btn-default') %>
+    </div>
+    <div id="highlight3" class="col-md-6 col-xs-12">
+      <h1>blablabla<br/><spam class="destak-text">UIKASACHEPORRÃ</spam></h1>
+      <%= link_to("Ver mais...", posts_path, class: 'btn btn-default') %>
+    </div>
+  </div>
+</section>

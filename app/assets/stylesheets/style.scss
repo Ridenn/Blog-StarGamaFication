@@ -1,3 +1,17 @@
+$break-small: 360px;
+$break-medium: 768px;
+$break-large: 1280px;
+
+@media screen and (max-width: $break-small) {
+}
+@media screen and (min-width: $break-medium) {
+  h1 {
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: $break-large) {
+}
+
 body {
   padding-top: 70px;
 }
@@ -15,15 +29,15 @@ abbr {
 
 h1 {
   font-family: 'Raleway', sans-serif;
-  font-size: 48px;
   color: white;
-  font-weight: 100;
+  font-weight: 300;
 }
+
 h2 {
   font-family: 'Raleway', sans-serif;
   font-size: 36px;
   color: white;
-  font-weight: 100;
+  font-weight: 300;
 }
 h3 {
   font-family: 'Raleway', sans-serif;
