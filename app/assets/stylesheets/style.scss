@@ -11,10 +11,20 @@ $break-large: 1280px;
     }
     .navbar-toggle {
         display: block;
+        border-color: #5038fc !important;
+    }
+    .navbar-toggle:hover {
+      background-color: #5038fc !important;
+    }
+    .icon-bar {
+      background-color: white !important;
+    }
+    .navbar-toggle:focus {
+      background-color: #5038fc !important;
     }
     .navbar-collapse {
-        border-top: 1px solid transparent;
-        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+      background-color: #1a1a23;
+      float: right;
     }
     .navbar-fixed-top {
         top: 0;
@@ -149,6 +159,7 @@ input {
 .navbar-header button {
   margin: 30px;
 }
+
 
 .destak-text {
   font-weight: 800;
