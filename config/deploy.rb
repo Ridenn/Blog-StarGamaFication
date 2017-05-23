@@ -1,4 +1,5 @@
-# Rodar sem sudo
+# Rodar com pty e sem sudo
+set :pty, true
 set :use_sudo, false
 
 # Nome da aplicação
