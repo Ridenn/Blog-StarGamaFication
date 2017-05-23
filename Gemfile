@@ -12,7 +12,7 @@ end
 gem 'rails', '~> 5.0.3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', :group => :development
-gem 'pg', :group => :production
+#gem 'pg', :group => :production
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -70,6 +70,9 @@ gem 'font-awesome-rails'
 
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
+
+# Domain name parser for Ruby based on the Public Suffix List.
+gem 'public_suffix'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
