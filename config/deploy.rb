@@ -14,6 +14,7 @@ set :deploy_to, '/home/blog/apps/blog'
 # Set nginx options
 set :nginx_domains, "empreededorismoideias.com.br"
 set :nginx_service_path, "/etc/init.d/nginx"
+set :nginx_log_path, "/home/blog/apps/blog/shared/log"
 
 # Linka arquivos e pastas
 append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/application.yml'
