@@ -1,6 +1,3 @@
-# Rodar sem sudo
-set :use_sudo, false
-
 # Nome da aplicação
 set :application, 'blog'
 set :pty, true
