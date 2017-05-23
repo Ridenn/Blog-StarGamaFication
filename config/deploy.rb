@@ -1,5 +1,6 @@
 # Nome da aplicação
 set :application, 'blog'
+default_run_options[:pty] = true
 
 # Repositório para baixar e usar
 set :repo_url, 'git@github.com:aschiavon91/Blog-StarGamaFication.git'
