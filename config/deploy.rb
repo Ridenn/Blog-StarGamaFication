@@ -12,7 +12,7 @@ set :repo_url, 'git@github.com:aschiavon91/Blog-StarGamaFication.git'
 set :deploy_to, '/home/deploy/apps/blog'
 
 # Set nginx options
-set :nginx_domains, "empreededorismoideias.com.br"
+#set :nginx_domains, "empreededorismoideias.com.br"
 
 # Linka arquivos e pastas
 append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/application.yml'
