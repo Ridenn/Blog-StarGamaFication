@@ -1,6 +1,8 @@
+# Rodar sem sudo
+set :use_sudo, false
+
 # Nome da aplicação
 set :application, 'blog'
-set :pty, true
 
 # Repositório para baixar e usar
 set :repo_url, 'git@github.com:aschiavon91/Blog-StarGamaFication.git'
