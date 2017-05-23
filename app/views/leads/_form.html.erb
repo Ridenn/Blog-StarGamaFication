@@ -23,6 +23,7 @@
     <%= f.input :email, label: 'Email:' %>
   </div>
   <br />
+  <div class="form-group_occupation">
     <%= label_tag "Qual a sua ocupação?" %>
     <br />
     <%= f.select(:occupation, Lead.options_for_select) %>
