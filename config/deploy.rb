@@ -7,6 +7,10 @@ set :repo_url, 'git@github.com:aschiavon91/Blog-StarGamaFication.git'
 # Repare nesse caminho, eh o mesmo onde ficara o banco de dados da produção
 set :deploy_to, '/home/blog/apps/blog'
 
+# Set nginx options
+set :nginx_domains, "empreededorismoideias.com.br"
+set :nginx_service_path, "/etc/init.d/nginx"
+
 # Linka arquivos e pastas
 append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/application.yml'
 
