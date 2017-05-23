@@ -10,9 +10,6 @@ require 'capistrano/rails'
 require 'capistrano/puma'
 install_plugin Capistrano::Puma
 
-require 'capistrano/nginx'
-install_plugin Capistrano::Puma::Nginx
-
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"
