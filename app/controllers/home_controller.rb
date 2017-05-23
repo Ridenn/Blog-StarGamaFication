@@ -8,4 +8,8 @@ class HomeController < ApplicationController
 
   def thanks
   end
+
+   def pdf
+    send_file Rails.root.join('private', 'ebook.pdf'), :type=>"application/pdf", :x_sendfile=>true
+  end
 end
