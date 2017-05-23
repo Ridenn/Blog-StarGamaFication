@@ -55,15 +55,15 @@ ActiveRecord::Schema.define(version: 20170523063806) do
     t.string   "name"
     t.string   "surname"
     t.string   "email"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.string   "city"
     t.string   "region_name"
     t.string   "country_name"
     t.float    "latitude"
     t.float    "longitude"
     t.string   "ip"
-    t.integer  "occupation"
+    t.integer  "occupation",   default: 0
     t.string   "kind"
   end
 

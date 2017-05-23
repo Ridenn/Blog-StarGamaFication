@@ -23,10 +23,12 @@
     <%= f.input :email, label: 'Email:' %>
   </div>
   <br />
-  <div class="form-group">
+  <div class="form-group_occupation">
     <%= label_tag "Qual a sua ocupação?" %>
-    <%= f.select :occupation, Lead.options_for_select %>
+    <br />
+    <%= f.select(:occupation, Lead.options_for_select) %>
   </div>
+  <br />
   <div class="form-group_btn">
     <%= f.button :submit, 'Cadastrar' %>
   </div>
