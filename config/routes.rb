@@ -4,8 +4,9 @@ Rails.application.routes.draw do
   get 'home', to: "home#index", :as => 'home'
   get 'obrigado', to: "home#thanks", :as => 'thanks'
   get 'contato', to: "home#contact", :as => 'contact'
-  get "home/pdf"
-  
+
+  get 'home/pdf', to: 'home#pdf'
+
   resources :posts
   resources :leads
   resources :contents
