@@ -45,7 +45,12 @@ $break-large: 1280px;
     padding: 10px;
     margin-left: 10px;
   }
+
+  #box-img-basic-info {
+    padding-top: 150px;
+  }
 }
+
 @media screen and (min-width: $break-medium) {
   #hero {
     padding-top: 50px !important;
@@ -53,12 +58,7 @@ $break-large: 1280px;
   .infos-hero, .form-hero {
     top: 30%;
   }
-  #minibox1-basic-infos {
-    margin-top: 30px;
-  }
-  #minibox2-basic-infos {
-    margin-top: 30px;
-  }
+
   .right-arrow {
     right: 15%;
   }
@@ -70,7 +70,16 @@ $break-large: 1280px;
     height: 100vh;
   }
   #minibox1-basic-infos p, #minibox2-basic-infos p  {
-    margin-top: 20px;
+    margin-top: 20px !important;
+    padding-left: 15px;
+  }
+
+  #box-basic-infos p {
+    margin-top: 20px !important;
+  }
+
+  h3 {
+    padding-left: 15px;
   }
 
   #minibox1-basic-infos img, #minibox2-basic-infos img  {
