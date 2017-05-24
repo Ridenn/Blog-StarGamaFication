@@ -23,6 +23,7 @@
 # Config
 config/application.yml
 config/secrets.yml
+secrets.yml
 /public/uploads/*
 /public/files/*
 
