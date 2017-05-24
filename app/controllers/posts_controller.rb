@@ -16,10 +16,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     if @post.save
-      flash[:notice] = "Successfully created post!"
+      flash[:notice] = "Postagem criada com sucesso!"
       redirect_to post_path(@post)
     else
-      flash[:alert] = "Error creating new post!"
+      flash[:alert] = "Erro ao criar nova postagem!"
       render :new
     end
   end
@@ -32,10 +32,10 @@ class PostsController < ApplicationController
   # Update action updates the post with the new information
   def update
     if @post.update_attributes(post_params)
-      flash[:notice] = "Successfully updated post!"
+      flash[:notice] = "Postagem atualizada com sucesso!"
       redirect_to post_path(@posts)
     else
-      flash[:alert] = "Error updating post!"
+      flash[:alert] = "Erro ao atualizar postagem!"
       render :edit
     end
   end
@@ -49,10 +49,10 @@ class PostsController < ApplicationController
   def destroy
     find_post
     if @post.destroy
-      flash[:notice] = "Successfully deleted post!"
+      flash[:notice] = "Postagem deletada com sucesso!"
       redirect_to posts_path
     else
-      flash[:alert] = "Error updating post!"
+      flash[:alert] = "Erro ao atualizar postagem!"
     end
   end
 
