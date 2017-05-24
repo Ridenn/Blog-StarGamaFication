@@ -2,31 +2,43 @@ $break-small: 360px;
 $break-medium: 768px;
 $break-large: 1280px;
 
-@media screen and (max-width: $break-small) {
+@media only screen and (max-width: $break-small) {
   section a {
     width: 100%;
   }
+  #social-icons ul li {
+    padding: 10px 20px !important;
+    display: inline-block !important;
+  }
 }
-@media screen and (min-width: $break-medium) {
-  .sec-footer-left {
-    padding-left: 30px !important;
+@media only screen and (max-width: $break-large) and (min-width: $break-medium) {
+  #social-icons ul li {
+    padding: 10px 20px !important;
+    display: inline-block !important;
+  }
+}
+@media only screen and (min-width: $break-large) {
+  #social-icons i {
+    font-size: 50px;
+    color: #5038fc;
   }
 
-  .sec-footer-mid {
-    padding: 0px 30px !important;
+  .sec-footer-mid, .sec-footer-right {
+    margin: 0px 0px !important;
   }
 
-  .sec-footer-right {
-    padding-right: 30px !important;
-  }
   #social-icons ul {
-    float: right;
-    padding: 0 50px;
+    list-style-type: none;
+    margin: 20px;
+    text-align: center;
+    padding-left: 0px !important;
+  }
+
+  #social-icons ul li {
+    display: inline-block;
+    padding: 10px 20px;
   }
 }
-@media screen and (min-width: $break-large) {
-}
-
 
 footer {
   display:inline-block;
@@ -39,12 +51,8 @@ footer {
 
 #logo-footer {
   width: 100%;
-  padding-top: 25px;
+  padding-top: 30px;
   padding-right: inherit;
-}
-
-#social-icons {
-  padding: 30px;
 }
 
 #social-icons i {
@@ -54,16 +62,5 @@ footer {
 
 #social-icons ul {
   list-style-type: none;
-  padding-left: 0px;
-  padding-right: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#social-icons li {
-  padding-left: 60px;
-}
-
-#social-icons ul li {
-  display: inline-block;
+  text-align: center;
 }
