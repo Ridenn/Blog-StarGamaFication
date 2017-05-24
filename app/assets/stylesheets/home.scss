@@ -40,6 +40,9 @@ $break-large: 1280px;
 }
 
 @media screen and (min-width: $break-small) and (max-width: $break-medium) {
+  #hero {
+    padding-top: 100px;
+  }
   #minibox1-basic-infos img, #minibox2-basic-infos img  {
     width: 80%;
     padding: 10px;
@@ -95,10 +98,11 @@ $break-large: 1280px;
     height: auto;
   }
 }
+
 @media screen and (min-width: $break-large) {
   #hero {
-    padding-top: 50px !important;
-    height: 500px !important;
+    padding-top: 100px !important;
+    height: auto !important;
   }
 }
 
@@ -121,37 +125,41 @@ $break-large: 1280px;
   margin-bottom: 20px;
 }
 
+.explications-hero {
+  text-align: center;
+}
+
 .form-group_name {
   white-space : nowrap;
 }
 
-.form-group_name .lead_name {
+.form-group_name {
   display: inline-block;
-  width: 50%;
   padding-right: 10px;
 }
 
-.form-group_name .lead_surname {
+.form-group_surname {
   display: inline-block;
-  width: 50%;
   padding-right: 10px;
 }
 
 .form-group_email {
   display: inline-block;
-  width: 100%;
   padding-right: 5px;
 }
 
 .form-group_occupation {
-  width: 100%;
-  padding-right: 5px;
+  display: inline-block;
+  padding-right: 10px;
+  padding-bottom: 30px;
 }
 
-.form-group select {
+.form-group_occupation select {
   display: inline-block;
   width: 100%;
-  padding-right: 5px;
+  height: 34px;
+  border: 0px;
+  padding: 6px 12px;
 }
 
 .form-group_btn {

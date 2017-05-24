@@ -5,13 +5,14 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
 
   <body>
     <!-- Render navigation bar -->
     <%= render "layouts/navigation" %>
     <p class="notice"><%= notice %></p>
-     <%= flash_message.html_safe %> 
+     <%= flash_message.html_safe %>
       <%= yield %>
   </body>
   <%= render "layouts/footer" %>
