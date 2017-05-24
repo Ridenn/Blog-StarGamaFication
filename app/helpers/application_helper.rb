@@ -3644,4 +3644,16 @@ module ApplicationHelper
       false
     end
   end
+  
+  def flash_message 
+    messages = "" 
+    [:notice, :info, :warning, :alert].each {|type| 
+      if flash[type] 
+        messages += "<p class=\"#{type}\">" + html_escape(flash[type]) + "</p>" 
+      end 
+    } 
+ 
+    messages 
+  end 
+end
 end
