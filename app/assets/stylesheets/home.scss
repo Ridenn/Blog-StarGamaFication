@@ -59,6 +59,11 @@ $break-large: 1280px;
     top: 30%;
   }
 
+  .infos-hero p {
+    text-align: center;
+    padding-left: 0;
+  }
+
   .right-arrow {
     right: 15%;
   }
@@ -113,6 +118,7 @@ $break-large: 1280px;
 
 .infos-hero h1 {
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .form-group_name {
@@ -138,7 +144,6 @@ $break-large: 1280px;
 }
 
 .form-group_occupation {
-  display: inline-block;
   width: 100%;
   padding-right: 5px;
 }
