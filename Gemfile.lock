@@ -93,7 +93,6 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    dotenv (2.2.1)
     enum_help (0.0.17)
       activesupport (>= 3.0.0)
     erubis (2.7.0)
@@ -238,7 +237,6 @@ DEPENDENCIES
   ckeditor (~> 4.1)
   coffee-rails (~> 4.2)
   devise
-  dotenv
   enum_help
   font-awesome-rails
   geocoder
