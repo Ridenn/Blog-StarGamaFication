@@ -39,6 +39,8 @@ footer {
 
 #logo-footer {
   width: 100%;
+  padding-top: 25px;
+  padding-right: inherit;
 }
 
 #social-icons {
@@ -54,6 +56,10 @@ footer {
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+}
+
+#social-icons li {
+  padding-left: 60px;
 }
 
 #social-icons ul li {
