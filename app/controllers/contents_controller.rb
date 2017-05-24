@@ -16,10 +16,10 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(content_params)
     if @content.save
-      flash[:notice] = "Successfully created content!"
+      flash[:notice] = "Conteúdo criado com sucesso!"
       redirect_to contents_path(@content)
     else
-      flash[:alert] = "Error creating new content!"
+      flash[:alert] = "Erro ao criar novo conteúdo!"
       render :new
     end
   end
@@ -32,10 +32,10 @@ class ContentsController < ApplicationController
   # Update action updates the content with the new information
   def update
     if @content.update_attributes(content_params)
-      flash[:notice] = "Successfully updated content!"
+      flash[:notice] = "Conteúdo atualizado com sucesso!"
       redirect_to contents_path(@contents)
     else
-      flash[:alert] = "Error updating content!"
+      flash[:alert] = "Erro ao atualizar conteúdo!"
       render :edit
     end
   end
@@ -49,10 +49,10 @@ class ContentsController < ApplicationController
   def destroy
     find_content
     if @content.destroy
-      flash[:notice] = "Successfully deleted content!"
+      flash[:notice] = "Conteúdo deletado com sucesso!"
       redirect_to contents_path
     else
-      flash[:alert] = "Error updating content!"
+      flash[:alert] = "Erro ao atualizar conteúdo!"
     end
   end
 

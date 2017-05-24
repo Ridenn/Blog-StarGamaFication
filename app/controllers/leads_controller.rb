@@ -16,11 +16,11 @@ class LeadsController < ApplicationController
       if @lead.save
         redirect_to thanks_path
       else
-        flash[:alert] = "Error creating new lead"
+        flash[:alert] = "Erro ao realizar inscrição, este email não é válido!"
         redirect_to root_path
       end
     else
-      flash[:alert] = "Error creating new lead, this email is not valid!"
+      flash[:alert] = "Erro ao realizar inscrição, certifique-se de que todas as informações estão corretas."
       redirect_to root_path
     end
   end
