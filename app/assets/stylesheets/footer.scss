@@ -22,6 +22,9 @@ $break-large: 1280px;
     font-size: 50px;
     color: #5038fc;
   }
+  #social-icons ul li {
+    padding: 10px 30px !important;
+  }
 
   .sec-footer-mid, .sec-footer-right {
     margin: 0px 0px !important;
@@ -35,8 +38,7 @@ $break-large: 1280px;
   }
 
   #social-icons ul li {
-    display: inline-block;
-    padding: 10px 20px;
+    display: inline-block !important;
   }
 }
 

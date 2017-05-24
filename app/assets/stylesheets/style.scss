@@ -60,6 +60,7 @@ $break-large: 1280px;
 }
 
 @media screen and (max-width: $break-small) {
+
 }
 @media screen and (min-width: $break-medium) {
   h1 {
@@ -72,15 +73,17 @@ $break-large: 1280px;
 body {
   padding-top: 70px;
 }
-.notice {
-  display: none;
-}
-
-.alert {
-   background-color: red; 
-   margin-top: 30px; 
-   margin-bottom: 3px; 
-   display: block;
+.notification {
+  float: right;
+  top: 80px;
+  right: 30px;
+  position: absolute;
+  width: 400px; //passar p/ mobile
+  z-index: 100;
+  margin-top: 30px;
+  margin-bottom: 3px;
+  padding: 8px;
+  text-align: center;
 }
 
 abbr {

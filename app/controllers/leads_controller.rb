@@ -65,4 +65,12 @@ class LeadsController < ApplicationController
       false
     end
   end
+
+  def lead_results
+    @leads = Lead.all
+    respond_to do |format|
+      format.html
+      format.csv { send_data @results.to_csv }
+    end
+  end
 end

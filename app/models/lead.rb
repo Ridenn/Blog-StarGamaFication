@@ -8,4 +8,5 @@ class Lead < ApplicationRecord
   def self.options_for_select
     occupations
   end
+
 end

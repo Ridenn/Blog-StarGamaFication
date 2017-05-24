@@ -38,10 +38,10 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: blog_production
-  username: deploy
-  password: deploy
+  database: <%= ENV['PGSQL_DB'] %>
+  username: <%= ENV['PGSQL_USER'] %>
+  password: <%= ENV['PGSQL_PW'] %>
   host: localhost
-  port: 5432
+  port: 5544
   pool: 5
   timeout: 5000
