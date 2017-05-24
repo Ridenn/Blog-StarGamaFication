@@ -48,12 +48,14 @@ footer {
 }
 
 #social-icons i {
-  font-size: 36px;
+  font-size: 50px;
   color: #5038fc;
 }
 
 #social-icons ul {
   list-style-type: none;
+  padding-left: 0px;
+  padding-right: 30px;
   display: flex;
   justify-content: space-between;
 }
