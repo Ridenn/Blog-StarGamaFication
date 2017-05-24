@@ -69,7 +69,7 @@ gem 'font-awesome-rails'
 # Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
 
-gem 'dotenv'
+#gem 'dotenv'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

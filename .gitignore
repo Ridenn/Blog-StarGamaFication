@@ -21,8 +21,8 @@
 .byebug_history
 
 # Config
-/config/application.yml
-/config/secrets.yml
+config/application.yml
+config/secrets.yml
 /public/uploads/*
 /public/files/*
 
