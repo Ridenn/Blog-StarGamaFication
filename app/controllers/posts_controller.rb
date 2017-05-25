@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   def update
     if @post.update_attributes(post_params)
       flash[:notice] = "Postagem atualizada com sucesso!"
-      redirect_to post_path(@posts)
+      redirect_to post_path(@post)
     else
       flash[:alert] = "Erro ao atualizar postagem!"
       render :edit

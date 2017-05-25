@@ -40,3 +40,29 @@
   padding: 30px;
   background-color: #5038fc;
 }
+
+#post-view {
+  background-color: #5038fc;
+  padding: 50px;
+}
+
+.post-content {
+  text-align: left;
+  position: relative;
+}
+
+.post-content::before {
+  content: " ";
+  display: inline-block;
+  height: 100%;
+  width: 1%;
+  vertical-align: middle;
+}
+.post-content p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.post-content h1 {
+  margin-bottom: 30px;
+}
