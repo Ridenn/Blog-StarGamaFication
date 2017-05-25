@@ -1,1 +1,21 @@
-<h1> Hello </h1>
+<% if @posts.count > 0 %>
+
+<% else %>
+  <section id="without-posts" class="container-fluid">
+    <div id="hero" class="row">
+      <article class="col-md-12">
+        <h1>Ainda não temos nenhuma postagem.</h1><br/>
+        <% if admin_signed_in? %>
+          <%= link_to "Faça uma postagem!", new_post_path %>
+        <% else %>
+          <h2>Volte mais tarde que teremos mais conteúdo para você!</h2>
+        <% end %>
+      </article>
+    </div>
+    <div id="hero" class="row">
+      <div class="infos-hero col-md-12">
+        <%= render "leads/form" %>
+      </div>
+    </div>
+  </section>
+<% end %>
