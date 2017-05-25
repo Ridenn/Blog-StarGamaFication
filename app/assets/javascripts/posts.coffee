@@ -10,4 +10,3 @@ jQuery(document).on('turbolinks:load', (e)->
     if Turbolinks
         Turbolinks.Cache()
 )
-

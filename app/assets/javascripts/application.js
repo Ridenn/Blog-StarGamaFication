@@ -15,7 +15,7 @@
 //= require bootstrap-sprockets
 //= require jquery.slick
 //= require slider
-//= require turbolinks
 //= require ckeditor/init
 //= require toastr
+//= require turbolinks
 //= require_tree .
