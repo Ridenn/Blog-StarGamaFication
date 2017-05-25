@@ -246,6 +246,7 @@ $break-large: 1280px;
 
 .slick-dots {
   bottom: 0px !important;
+  width: auto !important;
 }
 
 .slick-dots li button::before {
@@ -318,6 +319,7 @@ $break-large: 1280px;
   top: 40%;
   left: 50%;
   width: 100%;
+  padding-bottom: 60px;
   transform: translate(-50%, -50%);
 }
 
@@ -325,6 +327,8 @@ $break-large: 1280px;
   position: absolute;
   top: 30%;
   left: 50%;
+  width: 100%;
+  padding-bottom: 20px;
   transform: translate(-50%, -50%);
 }
 
