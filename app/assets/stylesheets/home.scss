@@ -109,6 +109,10 @@ $break-large: 1280px;
     padding-top: 100px !important;
     height: auto !important;
   }
+
+  #minibox1-basic-infos h3 {
+    padding-left: 60px;
+  }
 }
 
 #hero {
@@ -205,6 +209,10 @@ $break-large: 1280px;
 #box-basic-infos p {
   margin-top: 40px;
   font-size: 14px;
+}
+
+#minibox1-basic-infos p {
+  padding-left: 10px;
 }
 
 #box-basic-infos article {
