@@ -73,6 +73,10 @@ namespace :deploy do
       invoke 'puma:restart'
     end
   end
+
+  before :starting,     :check_revision
+  after  :finishing,    :compile_assets
+  after  :finishing,    :cleanup
 end
 
 namespace :logs do
@@ -82,12 +86,6 @@ namespace :logs do
       execute "tail -f #{shared_path}/log/#{fetch(:rails_env)}.log"
     end
   end
-end
-
-
-  before :starting,     :check_revision
-  after  :finishing,    :compile_assets
-  after  :finishing,    :cleanup
 end
 
 # Rodar antes do check deploy a task upload (logo acima)
