@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get 'obrigado', to: "home#thanks", :as => 'thanks'
   get 'contato', to: "home#contact", :as => 'contact'
 
+  get 'google1806d511e453e0c0.html', to: "home#google_validation"
+
   get 'home/pdf', to: 'home#pdf'
 
   resources :posts
