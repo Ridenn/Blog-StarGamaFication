@@ -1,10 +1,43 @@
-// Place all the styles related to the Posts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#all-posts {
+  text-align: center;
+  margin-top: 50px;
+}
 
 #without-posts {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #5038fc;
   text-align: center;
+}
+
+.blog-post {
+  padding: 0 5px 0 5px;
+  position: relative;
+}
+
+.blog-post a i {
+  position: absolute;
+  display: inline-block;
+  font-size: 30px;
+  color: #31313b;
+}
+
+.post-delete {
+    right: 20px;
+}
+
+.post-edit {
+    right: 60px;
+}
+
+.well {
+  background-color: #5038fc !important;
+}
+
+#new-post {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: #5038fc;
 }

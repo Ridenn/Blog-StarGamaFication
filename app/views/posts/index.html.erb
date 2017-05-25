@@ -1,16 +1,27 @@
 <% if @posts.count > 0 %>
-  <% @posts.each do |post| %>
-    <section class="container-fluid">
-      <article class="col-md-10">
-        <div class="col-md-10">
-          <h1 class="text-center"> <%= post.title %><br/></h1>
-        </div>
-        <div class="col-xs-12">
-          <%= raw post.body %>
-        </div>
-      </article>
-    </section>
-  <% end %>
+  <section id="all-posts" class="container-fluid">
+    <div class="row">
+      <% @posts.each do |post| %>
+        <% img_post = highlight_img(post) %>
+        <article class="col-md-4 blog-post">
+          <div class="col-md-12 well">
+            <% if admin_signed_in? %>
+              <%= link_to edit_post_path(post) do %>
+                <% fa_icon "pencil", class: "post-edit" %>
+              <% end %>
+              <%= link_to post_path(post), method: :delete, data: {confirm: "Tem certeza?"} do %>
+                <% fa_icon "trash", class: "post-delete" %>
+              <% end %>
+            <% end %>
+            <%= link_to post_path(post) do %>
+              <h1 class="text-center"><%= post.title %><br/></h1>
+              <%= img_post.html_safe %>
+            <% end %>
+          </div>
+        </article>
+      <% end %>
+    </div>
+  </section>
 <% else %>
   <section id="without-posts" class="container-fluid">
     <article class="col-md-12">
