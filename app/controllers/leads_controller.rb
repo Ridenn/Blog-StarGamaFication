@@ -51,7 +51,7 @@ class LeadsController < ApplicationController
   end
 
   def all_letters(str)
-    str[/^[a-zA-Z\u00C0-\u017F]+/]  == str
+    str[/^[a-zA-Z \u00C0-\u017F]+/]  == str
   end
 
   def validate_lead_data
