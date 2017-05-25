@@ -5,7 +5,6 @@ class PostsController < ApplicationController
   # Index action to render all posts
   def index
     @posts = Post.all
-    @lead = Lead.new
   end
 
   # New action for creating post
