@@ -4,7 +4,7 @@
 jQuery(document).on('turbolinks:load', (e)->
     #do your initialize here
     $('textarea.ckeditor').each(->
-        if $(this).css('visibility') == 'hidden'
+        if $(this).css('visibility') != 'hidden'
             CKEDITOR.replace(this)
     )
     if Turbolinks
