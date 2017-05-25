@@ -53,7 +53,6 @@ footer {
 
 #logo-footer {
   width: 100%;
-  padding-top: 30px;
   padding-right: inherit;
 }
 
@@ -62,7 +61,25 @@ footer {
   color: #5038fc;
 }
 
+#menu-list ul{
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0;
+  padding: 0;
+  padding-left: inherit;
+}
+
+#menu-list li {
+  display: block;
+  flex: 0 1 auto;
+  list-style-type: none;
+  font-size: 18px;
+}
+
 #social-icons ul {
   list-style-type: none;
   text-align: center;
+  float: inherit;
 }
