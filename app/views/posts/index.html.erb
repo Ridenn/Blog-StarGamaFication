@@ -2,19 +2,20 @@
   <section id="all-posts" class="container-fluid">
     <div class="row">
       <% @posts.each do |post| %>
+        <% img_post = highlight_img(post) %>
         <article class="col-md-4 blog-post">
           <div class="col-md-12 well">
             <% if admin_signed_in? %>
               <%= link_to edit_post_path(post) do %>
-                <% fa_icon "pencil", class: "post-edit" %>
+                <%= fa_icon "pencil", class: "post-edit" %>
               <% end %>
               <%= link_to post_path(post), method: :delete, data: {confirm: "Tem certeza?"} do %>
-                <% fa_icon "trash", class: "post-delete" %>
+                <%= fa_icon "trash", class: "post-delete" %>
               <% end %>
             <% end %>
             <%= link_to post_path(post) do %>
-              <h1 class="text-center"><%= post.title %><br/></h1>
-              <%= img_post.html_safe %>
+            <h1 class="text-center"><%= post.title %></h1><br/>
+              <%= raw img_post %>
             <% end %>
           </div>
         </article>

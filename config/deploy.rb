@@ -75,18 +75,14 @@ namespace :deploy do
   end
 
   namespace :logs do
-  task :tail, :file do |t, args|
-    if args[:file]
+    desc "tail rails logs"
+    task :tail_rails do
       on roles(:app) do
-        execute "tail -f #{shared_path}/log/#{args[:file]}.log"
+        execute "tail -f #{shared_path}/log/#{fetch(:rails_env)}.log"
       end
-    else
-      puts "please specify a logfile e.g: 'rake logs:tail[logfile]"
-      puts "will tail 'shared_path/log/logfile.log'"
-      puts "remember if you use zsh you'll need to format it as:"
-      puts "rake 'logs:tail[logfile]' (single quotes)"
     end
   end
+
 end
 
 
