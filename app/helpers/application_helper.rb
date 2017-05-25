@@ -3638,6 +3638,7 @@ module ApplicationHelper
     rescue SocketError
       false
     end
+
     if request != nil
       true
     else
