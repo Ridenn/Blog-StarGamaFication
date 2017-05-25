@@ -1,5 +1,11 @@
 <% if @posts.count > 0 %>
-
+  <section id="all-posts" class="container-fluid">
+    <div class="row">
+      <% @posts.each do |post| %>
+        
+      <% end %>
+    </div>
+  </section>
 <% else %>
   <section id="without-posts" class="container-fluid">
     <div id="hero" class="row">
