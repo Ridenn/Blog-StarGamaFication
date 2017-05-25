@@ -71,6 +71,8 @@ gem 'enum_help'
 
 gem 'toastr-rails'
 
+gem 'envyable'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
