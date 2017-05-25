@@ -1,0 +1,26 @@
+<% if @leads.count > 0 %>
+  <% @leads.each do |lead| %>
+    <section class="container-fluid">
+      <article class="col-md-10">
+        <div class="col-md-10">
+          <h1 class="text-center"> <%= lead.name %><br/></h1>
+        </div>
+        <div class="col-xs-12">
+          <%= lead.email %>
+        </div>
+      </article>
+    </section>
+  <% end %>
+<% else %>
+  <section id="without-leads" class="container-fluid">
+    <article class="col-md-12">
+      <h1>Ainda não temos nenhuma lead.</h1><br/>
+      <% if admin_signed_in? %>
+        <!-- <%= link_to "Faça uma divulgação!", new_lead_path %> -->
+      <% else %>
+        <h2>Volte mais tarde que teremos mais conteudo para você!</h2>
+      <% end %>
+    </article>
+  </section>
+<% end %>
+<%= link_to 'Download CSV list', leads_path(format: :csv) %>

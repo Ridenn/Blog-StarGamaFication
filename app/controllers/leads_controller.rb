@@ -3,6 +3,17 @@ class LeadsController < ApplicationController
 
   before_action :find_lead, only: [:edit, :update, :show, :delete]
 
+  def index
+    @leads = Lead.all
+    respond_to do |format|
+      format.html
+      format.csv do
+        headers['Content-Disposition'] = "attachment; filename=\"lead-list\""
+        headers['Content-Type'] ||= 'text/csv'
+      end
+    end
+  end
+
   # New action for creating post
   def new
     @lead = Lead.new
@@ -63,14 +74,6 @@ class LeadsController < ApplicationController
       data
     else
       false
-    end
-  end
-
-  def lead_results
-    @leads = Lead.all
-    respond_to do |format|
-      format.html
-      format.csv { send_data @results.to_csv }
     end
   end
 end
