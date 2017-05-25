@@ -30,3 +30,7 @@ secrets.yml
 /public/uploads/*
 /public/files/*
 .env.*
+
+# Don't check in credentials 
+config/env.yml
+config/database.yml

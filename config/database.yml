@@ -40,7 +40,7 @@ production:
   encoding: unicode
   database: <%= ENV['PGSQL_DB'] %>
   username: <%= ENV['PGSQL_USER'] %>
-  password: <%= ENV['PGSQL_PW'] %>
+  password: <%= ENV['PGSQL_PWD'] %>
   host: localhost
   port: 5544
   pool: 5
