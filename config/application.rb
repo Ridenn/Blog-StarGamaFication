@@ -24,5 +24,6 @@ module EmpreendedorismoIdeiasBlog
     # -- all .rb files in that directory are automatically loaded.
     config.time_zone = 'Brasilia'
     config.active_record.default_timezone = :local
+    config.google_verification = "google1806d511e453e0c0"
   end
 end

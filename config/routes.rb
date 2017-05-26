@@ -5,13 +5,15 @@ Rails.application.routes.draw do
   get 'obrigado', to: "home#thanks", :as => 'thanks'
   get 'contato', to: "home#contact", :as => 'contact'
 
-  get 'google1806d511e453e0c0.html', to: "home#google_validation"
-
   get 'home/pdf', to: 'home#pdf'
 
   resources :posts
   resources :leads
   resources :contents
+
+  get "/#{Rails.application.config.google_verification}.html",
+  to: proc { |env| [200, {},
+    ["google-site-verification: #{Rails.application.config.google_verification}.html"]] }
 
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
