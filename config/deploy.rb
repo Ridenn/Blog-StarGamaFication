@@ -13,7 +13,6 @@ set :stage,           :production
 set :deploy_via,      :remote_cache
 # Repare nesse caminho, eh o mesmo onde ficara o banco de dados da produção
 set :deploy_to, '/home/deploy/apps/blog'
-set :upload_dirs, 'public/uploads'
 # set :puma_bind,       "unix://#{shared_path}/tmp/sockets/#{fetch(:application)}-puma.sock"
 # set :puma_state,      "#{shared_path}/tmp/pids/puma.state"
 # set :puma_pid,        "#{shared_path}/tmp/pids/puma.pid"
@@ -28,7 +27,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # Linka arquivos e pastas
 append :linked_files, 'config/database.yml', 'config/secrets.yml', 'config/application.yml'
 
-append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system'
+append :linked_dirs, 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'public/system', 'public/uploads'
 
 # Define a quantidade de releases no server
 set :keep_releases, 1
