@@ -3,4 +3,7 @@ class Post < ApplicationRecord
   validates :body, presence: true
 
   belongs_to :admin
+
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :finders]
 end
