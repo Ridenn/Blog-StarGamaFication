@@ -3634,20 +3634,14 @@ module ApplicationHelper
 
   def domain_exists?(domain)
     begin
-      request = Socket.gethostbyname(domain)
-    rescue SocketError
-      false
-    end
-
-    if request != nil
+      registered = Whois.whois(domain).parser.registered?
+    rescue Timeout::Error
       true
-    else
-      false
     end
   end
 
   def highlight_img(post)
     Nokogiri::HTML.fragment(post.body).css('img').remove_attr('style').add_class('img-responsive').collect(&:to_s)[0]
   end
-  
+
 end
