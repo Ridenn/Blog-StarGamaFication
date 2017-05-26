@@ -1,7 +1,12 @@
 
 #all-posts {
-  text-align: center;
   margin-top: 50px;
+  text-align: center;
+  background-image: image-url('BG_header_home_efect.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #without-posts {
