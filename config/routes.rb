@@ -11,9 +11,7 @@ Rails.application.routes.draw do
   resources :leads
   resources :contents
 
-  get "/#{Rails.application.config.google_verification}.html",
-  to: proc { |env| [200, {},
-    ["google-site-verification: #{Rails.application.config.google_verification}.html"]] }
+  get "/#{Rails.application.config.google_verification}.html", to: "home#googlekey"
 
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
