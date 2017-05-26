@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   resources :leads
   resources :contents
 
-  get "/#{Rails.application.config.google_verification}.html", to: "home#googlekey"
+  get "/#{Rails.application.config.google_verification}.html", :to => redirect("/#{Rails.application.config.google_verification}.html")
 
   devise_for :admins
   mount Ckeditor::Engine => '/ckeditor'
