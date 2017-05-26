@@ -1,12 +1,19 @@
+<table class="">
+  ...
+</table>
+
 <% if @leads.count > 0 %>
   <% @leads.each do |lead| %>
-    <section class="container-fluid">
-      <article class="col-md-10">
-        <div class="col-md-10">
+    <section class="container">
+      <article class="col-md-12 col-xs-12 table table-striped">
+        <div class="col-md-5 col-xs-12">
           <h1 class="text-center"> <%= lead.name %><br/></h1>
         </div>
-        <div class="col-xs-12">
+        <div class="col-md-5">
           <%= lead.email %>
+        </div>
+        <div class="col-md-2">
+          <%= link_to "Apagar", leads_path(lead), method: :destroy %>
         </div>
       </article>
     </section>

@@ -1,7 +1,7 @@
 class LeadsController < ApplicationController
   include ApplicationHelper
   before_action :find_lead, only: [:edit, :update, :show, :delete]
-  before_action :authenticate_admin!
+  before_action :authenticate_admin!, except: [:new, :create]
 
   def index
     @leads = Lead.all
