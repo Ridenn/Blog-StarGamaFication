@@ -73,6 +73,8 @@ gem 'toastr-rails'
 
 gem 'envyable'
 
+gem 'friendly_id'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -93,6 +95,7 @@ group :development do
   gem 'capistrano-rails',   require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano3-puma',   require: false
+  gem 'capistrano-rails-console', require: false
 end
 
 group :production do
