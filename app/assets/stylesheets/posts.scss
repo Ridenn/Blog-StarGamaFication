@@ -1,3 +1,19 @@
+$break-small: 360px;
+$break-medium: 768px;
+$break-large: 1280px;
+
+@media screen and (max-width: $break-small) {
+  #without-posts {
+    padding-top: 50px !important;
+  }
+}
+@media screen and (min-width: $break-small) and (max-width: $break-medium) {
+  #without-posts {
+    padding-top: 50px !important;
+  }
+}
+@media screen and (min-width: $break-large) {
+}
 
 #all-posts {
   padding-top: 50px;
@@ -18,9 +34,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 550px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  position: relative;
+}
+
+.nopost-msg{
+  position: absolute;
+  display: block;
+  margin-bottom: 150px;
+  top: 200px;
+  transform: translateY(-50%);
 }
 
 .btn-post {
@@ -31,9 +53,9 @@
 }
 
 #form-posts {
-  position: absolute;
-  top: 100px;
-  right: 10px;
+  padding-top: 50px;
+  padding-bottom: 30px;
+  display: inline-block;
 }
 
 .blog-post {
@@ -61,7 +83,11 @@
   border: 0px !important;
 }
 
-.well a h1:hover {
+.well a h2 {
+  word-wrap: break-word;
+}
+
+.well a h2:hover {
   text-decoration: none;
   color:  #5038fc;
 }
@@ -81,7 +107,14 @@
 }
 
 #post-view {
-  padding: 50px;
+  background-image: image-url('BG_header_home_efect.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  padding: 30px;
 }
 
 .post-content {
@@ -104,4 +137,8 @@
 
 .post-content h1 {
   margin-bottom: 30px;
+}
+
+.post-view-content{
+  margin-top: 30px;
 }

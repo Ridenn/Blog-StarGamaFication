@@ -1,9 +1,9 @@
 <% if @posts.count > 0 %>
   <section id="all-posts" class="container-fluid">
-    <div class="row">
+    <div class="col-md-9">
       <% @posts.each do |post| %>
         <% img_post = highlight_img(post) %>
-        <article class="col-md-4 blog-post">
+        <article class="col-md-6 blog-post">
           <div class="col-md-12 well">
             <% if admin_signed_in? %>
               <%= link_to edit_post_path(post) do %>
@@ -14,22 +14,21 @@
               <% end %>
             <% end %>
             <%= link_to post_path(post) do %>
-            <h1 class="text-center"><%= post.title %></h1><br/>
+            <h2 class="text-center"><%= post.title %></h2><br/>
               <%= raw img_post %>
             <% end %>
           </div>
         </article>
       <% end %>
     </div>
-    <div class="row">
-      <div class="col-md-12">
-        <%= render "leads/form" %>
-      </div>
+    <div id="form-posts" class="col-md-3">
+      <h2>Baixe nosso eBook!</h2>
+      <%= render "leads/form" %>
     </div>
   </section>
 <% else %>
   <section id="without-posts" class="container-fluid">
-    <div class="row">
+    <div class="row col-md-9 nopost-msg">
       <article class="col-md-12">
         <h1>Desculpe<br/>Ainda não temos postagens.</h1><br/>
         <% if admin_signed_in? %>

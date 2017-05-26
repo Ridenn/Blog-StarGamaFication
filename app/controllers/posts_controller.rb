@@ -11,6 +11,7 @@ class PostsController < ApplicationController
   # New action for creating post
   def new
     @post = Post.new
+    @lead = Lead.new
   end
 
   # Create action saves the post into database
@@ -44,6 +45,7 @@ class PostsController < ApplicationController
   # The show action renders the individual post after retrieving the the id
   def show
     find_post
+    @lead = Lead.new
   end
 
   # The destroy action removes the post permanently from the database

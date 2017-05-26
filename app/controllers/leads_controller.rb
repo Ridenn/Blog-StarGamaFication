@@ -1,7 +1,7 @@
 class LeadsController < ApplicationController
   include ApplicationHelper
-
   before_action :find_lead, only: [:edit, :update, :show, :delete]
+  before_action :authenticate_admin!, only: [:destroy, :edit]
 
   def index
     @leads = Lead.all
@@ -34,6 +34,12 @@ class LeadsController < ApplicationController
       flash[:alert] = "Erro ao realizar inscrição, certifique-se de que todas as informações estão corretas."
       redirect_to root_path
     end
+  end
+
+  def destroy
+  end
+
+  def edit
   end
 
   private

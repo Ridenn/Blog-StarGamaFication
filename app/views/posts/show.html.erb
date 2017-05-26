@@ -1,8 +1,12 @@
 <section id="post-view" class="container-fluid">
-  <div class="row">
-    <div class="col-md-8 post-content well">
+  <div class="row post-view-content">
+    <div class="col-md-9 post-content well">
       <h1 class="text-center"> <%= @post.title %> </h1>
       <%= raw @post.body %>
+    </div>
+    <div id="form-posts" class="col-md-3">
+      <h2 class="text-center">Baixe nosso eBook!</h2>
+      <%= render "leads/form" %>
     </div>
   </div>
 </section>

@@ -30,8 +30,6 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   #   # do something
   # end
 
-  process :extract_dimensions
-
   # Create different versions of your uploaded files:
   version :thumb do
     process resize_to_fill: [118, 100]
@@ -40,6 +38,8 @@ class CkeditorPictureUploader < CarrierWave::Uploader::Base
   version :content do
     process resize_to_limit: [800, 800]
   end
+
+  process :extract_dimensions
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:
