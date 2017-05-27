@@ -3622,21 +3622,18 @@ module ApplicationHelper
 
     domain = email.split("@")[1]
     if public_domains.include? domain
-      return "B2C"
+      "B2C"
     else
-      if domain_exists?(domain)
-        "B2B"
-      else
-        "Invalid"
+      dns_ck = Resolv::DNS.new()
+      begin
+        if dns_ck.getaddress(domain)
+          "B2B"
+        else
+          "Invalid"
+        end
+      rescue Resolv::ResolvError => e
+        "B2C"
       end
-    end
-  end
-
-  def domain_exists?(domain)
-    begin
-      registered = Whois.whois(domain).parser.registered?
-    rescue Timeout::Error
-      true
     end
   end
 
