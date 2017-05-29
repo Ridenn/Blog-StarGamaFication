@@ -32,7 +32,7 @@
     <!-- Render navigation bar -->
     <%= render "layouts/navigation" %>
       <%= yield %>
-    <%= disqus_init %>
+    <%= disqus_init :reset => true %>
   </body>
   <%= render "layouts/footer" %>
 </html>
