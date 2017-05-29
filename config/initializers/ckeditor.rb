@@ -5,7 +5,14 @@ Ckeditor.setup do |config|
   # :mongoid (bson_ext recommended) by default. Other ORMs may be
   # available as additional gems.
   require 'ckeditor/orm/active_record'
-
+  #handle custom addons
+  #handle custom addons
+  config.assets_plugins = ['youtube']
+  assets_root =  Rails.root.join('app','assets','javascripts')
+  ckeditor_plugins_root = assets_root.join('ckeditor','plugins')
+   %w(openlink sourcedialog).each do |ckeditor_plugin|
+     Ckeditor.assets += Dir[ckeditor_plugins_root.join(ckeditor_plugin, '**', '*.js')].map {|x|              x.sub(assets_root.to_path, '').sub(/^\/+/, '')}
+   end
   # Allowed image file types for upload.
   # Set to nil or [] (empty array) for all file types
   # By default: %w(jpg jpeg png gif tiff)
