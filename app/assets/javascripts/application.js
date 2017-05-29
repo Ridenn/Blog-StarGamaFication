@@ -17,5 +17,6 @@
 //= require slider
 //= require ckeditor/init
 //= require toastr
+//= require disqus_rails
 //= require turbolinks
 //= require_tree .
