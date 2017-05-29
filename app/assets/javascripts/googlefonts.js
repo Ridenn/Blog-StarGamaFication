@@ -1,5 +1,5 @@
 WebFontConfig = {
-  google: { families: [ 'Raleway' ] }
+  google: { families: [ 'Raleway:100,200,400,800' ] }
 };
 (function() {
   var wf = document.createElement('script');
