@@ -28,6 +28,8 @@ $break-large: 1280px;
 
 #post-list {
   float: left;
+  position: relative;
+  padding: 0px !important;
 }
 
 #without-posts {
@@ -64,7 +66,6 @@ $break-large: 1280px;
 
 .blog-post {
   padding: 0px 5px !important;
-  position: relative;
   display: inline-block;
 }
 
