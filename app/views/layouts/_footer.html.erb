@@ -1,32 +1,29 @@
 <footer class="container-fluid">
   <div class="row">
     <section class="sec-footer-left col-md-4 col-lg-4">
-      <%= image_tag("alta1.png", id: 'logo-footer') %>
+      <!-- <%= image_tag("alta1.png", id: 'logo-footer') %> -->
     </section>
 
     <section id="menu-list" class="col-md-4 col-lg-4 sec-footer-mid">
-      <h3>Menu</h3>
+      <div class="row">
+        <section id="social-icons" class="col-md-12 col-sx-12 col-lg-12">
+          <ul>
+            <li class="col-sx-4">
+              <a href="https://www.facebook.com/empreendedorismoideias/" target="_blank"><%= fa_icon "facebook-square fa-4x" %></a>
+            </li>
+            <li class="col-sx-4">
+              <a class="col-sx-4" href="../contato"><%= fa_icon "envelope-square fa-4x" %></a>
+            </li>
+            <li class="col-sx-4">
+              <a class="col-sx-4" href="https://www.youtube.com/channel/UCKRkAsOZMW9bjXWZbVDiURw" target="_blank"><%= fa_icon "youtube-square fa-4x" %></a>
+            </li>
+          </ul>
+        </section>
+      </div>
       <ul>
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'Posts', posts_path %></li>
         <li><%= link_to 'Contato', contact_path %></li>
-      </ul>
-    </section>
-
-    <section class="col-md-4 col-lg-4 sec-footer-right">
-      <h3>Nossas redes sociais</h3>
-    </section>
-    <section id="social-icons" class="col-md-4 col-sx-12 col-lg-4">
-      <ul>
-        <li class="col-sx-4">
-          <a href="https://www.facebook.com/empreendedorismoideias/" target="_blank"><%= fa_icon "facebook fa-4x" %></a>
-        </li>
-        <li class="col-sx-4">
-          <a class="col-sx-4" href="../contato"><%= fa_icon "envelope fa-4x" %></a>
-        </li>
-        <li class="col-sx-4">
-          <a class="col-sx-4" href="https://www.youtube.com/channel/UCKRkAsOZMW9bjXWZbVDiURw" target="_blank"><%= fa_icon "youtube-play fa-4x" %></a>
-        </li>
       </ul>
     </section>
   </div>

@@ -62,6 +62,11 @@ footer {
   color: #5038fc;
 }
 
+#menu-list a, #menu-list a:hover, #menu-list a:visited, #menu-list a:active {
+  color: #fff !important;
+  text-decoration: none;
+}
+
 #menu-list ul{
   display: flex;
   align-items: stretch;
