@@ -26,6 +26,10 @@ $break-large: 1280px;
   min-height: 550px;
 }
 
+#post-list {
+  float: left;
+}
+
 #without-posts {
   text-align: center;
   background-image: image-url('BG_header_home_efect.jpg');
@@ -61,6 +65,7 @@ $break-large: 1280px;
 .blog-post {
   padding: 0 5px 0 5px;
   position: relative;
+  display: inline-block;
 }
 
 .blog-post a i {

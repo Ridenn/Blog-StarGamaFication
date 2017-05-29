@@ -1,6 +1,6 @@
 <% if @posts.count > 0 %>
   <section id="all-posts" class="container-fluid">
-    <div class="col-md-9 col-xs-12">
+    <div id="post-list" class="col-md-9 col-xs-12">
       <% @posts.each do |post| %>
         <% img_post = highlight_img(post) %>
         <article class="col-md-6 blog-post">
