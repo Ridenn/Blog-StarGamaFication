@@ -62,7 +62,7 @@
         <% html_id = "highlight#{i+1}" %>
           <div id="<%= html_id %>" class="col-md-6 col-xs-12">
             <%= raw img_post %>
-            <h1 class="text-center"><%= post.title %></h1><br/>
+            <h1 class="text-center"><%= truncate(post.title, length: 42) %></h1><br/>
             <%= link_to 'Ver post', post_path(post), class: 'btn btn-default' %>
           </div>
       <% end %>
