@@ -1,6 +1,9 @@
 class HomeController < ApplicationController
   def index
     @lead = Lead.new
+    if Post.count >= 3
+      @randposts = Post.all.sample(3)
+    end
   end
 
   def contact

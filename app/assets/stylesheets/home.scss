@@ -74,9 +74,6 @@ $break-large: 1280px;
   .left-arrow {
     left: 15%;
   }
-  #highlight-posts {
-    height: 100vh;
-  }
   #minibox1-basic-infos p, #minibox2-basic-infos p  {
     margin-top: 20px !important;
     padding-left: 15px;
@@ -303,29 +300,42 @@ $break-large: 1280px;
 
 #highlight1 {
   height: 100vh;
-  background-image: image-url('business.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  padding: 0px !important;
+  background: rgba(49,49,59, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 
 #highlight2 {
   height: 50vh;
-  background-image: image-url('business2.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  padding: 0px !important;
+  background: rgba(49,49,59, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
 }
 
 #highlight3 {
   height: 50vh;
-  background-image: image-url('business3.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
+  padding: 0px !important;
+  background: rgba(49,49,59, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden
+}
+
+#highlight1 img, #highlight2 img, #highlight3 img {
+  zoom: 2;
+  object-fit: cover;
+  margin: 0px !important;
+  opacity: 0.5;
+  flex-shrink: 0;
+  min-width: 100%;
+  min-height: 100%
 }
 
 #highlight1 h1 {
