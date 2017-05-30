@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  acts_as_disqusable
   validates :title, presence: true, length: {maximum: 140}
   validates :body, presence: true
 
