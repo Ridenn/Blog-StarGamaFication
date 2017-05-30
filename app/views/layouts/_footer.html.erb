@@ -1,34 +1,37 @@
 <footer class="container-fluid">
   <div class="row">
-    <section class="sec-footer-left col-md-4 col-lg-4">
-      <!-- <%= image_tag("alta1.png", id: 'logo-footer') %> -->
-    </section>
 
-    <section id="menu-footer-total" class="col-md-4 col-lg-4 sec-footer-mid">
-      <div class="row">
-        <section id="social-icons" class="col-md-12 col-sx-12 col-lg-12">
+    <section id="menu-footer-total" class="col-md-12 col-xs-12 col-lg-12 sec-footer-mid">
+      <div class="row col-md-3 col-xs-12">
+
+      </div>
+      <div class="row col-md-6 col-xs-12">
+        <section id="social-icons" class="col-md-12 col-xs-12 col-lg-12">
           <ul>
-            <li class="col-sx-4">
+            <li class="col-md-4 col-xs-12">
               <a href="https://www.facebook.com/empreendedorismoideias/" target="_blank"><%= fa_icon "facebook-square fa-2x" %></a>
             </li>
-            <li class="col-sx-4">
-              <a class="col-sx-4" href="../contato"><%= fa_icon "envelope-square fa-2x" %></a>
+            <li class="col-md-4 col-xs-12">
+              <a class="col-md-4 col-xs-12" href="../contato"><%= fa_icon "envelope-square fa-2x" %></a>
             </li>
-            <li class="col-sx-4">
-              <a class="col-sx-4" href="https://www.youtube.com/channel/UCKRkAsOZMW9bjXWZbVDiURw" target="_blank"><%= fa_icon "youtube-square fa-2x" %></a>
+            <li class="col-md-4 col-xs-12">
+              <a class="col-md-4 col-xs-12" href="https://www.youtube.com/channel/UCKRkAsOZMW9bjXWZbVDiURw" target="_blank"><%= fa_icon "youtube-square fa-2x" %></a>
             </li>
           </ul>
         </section>
+        <section id="menu-list" class="col-md-12 col-xs-12 col-lg-12">
+          <ul>
+            <li><%= link_to 'Home', root_path %></li>
+            <li>|</li>
+            <li><%= link_to 'Posts', posts_path %></li>
+            <li>|</li>
+            <li><%= link_to 'Contato', contact_path %></li>
+          </ul>
+        </section>
       </div>
-      <section id="menu-list" class="col-md-12 col-sx-12 col-lg-12">
-        <ul>
-          <li><%= link_to 'Home', root_path %></li>
-          <li>|</li>
-          <li><%= link_to 'Posts', posts_path %></li>
-          <li>|</li>
-          <li><%= link_to 'Contato', contact_path %></li>
-        </ul>
-      </section>
+      <div class="row col-md-3 col-xs-12">
+
+      </div>
     </section>
   </div>
 </footer>
