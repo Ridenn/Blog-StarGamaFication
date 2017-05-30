@@ -71,10 +71,11 @@ footer {
   display: flex;
   align-items: stretch;
   justify-content: space-between;
-  width: 80%;
+  width: 60%;
   margin: 0;
   padding: 0;
   padding-left: inherit;
+  margin-left: 30px;
 }
 
 #menu-list li {
@@ -82,6 +83,11 @@ footer {
   flex: 0 1 auto;
   list-style-type: none;
   font-size: 18px;
+}
+
+#menu-footer-total {
+  margin: 0 auto !important;
+  text-align: center;
 }
 
 #social-icons ul {
